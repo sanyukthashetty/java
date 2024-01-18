@@ -1,0 +1,21 @@
+public class Main
+{
+	public static void main(String[] args) {
+	int a=5;
+	int b=2;
+	double x;
+	if(a>b)
+	{
+	    x=Math.pow(a,b);
+	    System.out.println(x);
+	}
+	else{
+	    x=Math.pow(b,a);
+	    System.out.println(x);
+	}
+	
+	 
+	  
+	  
+	}
+}

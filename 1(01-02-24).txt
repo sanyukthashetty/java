@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main
+{   static int n,sum=0,digit;
+    static int happy()
+    {
+        while(n>0)
+        {
+            digit=n%10;
+            sum=sum+n*n;
+            n=n/10;
+        }
+        return sum;
+    }
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number:");
+        n=s.nextInt();
+        
+        
+    }
+}

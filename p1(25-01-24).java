@@ -1,0 +1,74 @@
+import java.util.Scanner;
+public class Main
+{
+    static int a;
+    static int c=a/2;
+    static void evenodd()
+    {
+       if(c*2==a)
+       {
+            System.out.println(a+"is even");
+       }
+       else{
+           System.out.println(a+"is odd");
+       }
+    }
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		a=s.nextInt();
+		evenodd();
+	}
+}
+
+
+
+
+
+import java.util.Scanner;
+public class Main
+{
+    
+    static void evenodd(int n)
+    {
+       if((n&1)==0)
+       {
+            System.out.println(n+"is even");
+       }
+       else{
+           System.out.println(n+"is odd");
+       }
+    }
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int a=s.nextInt();
+		evenodd(a);
+	}
+}
+
+
+
+import java.util.Scanner;
+public class Main
+{
+    static int a;
+    static int c=a/2;
+    static void evenodd()
+    {
+      switch(a%2)
+      {
+          case 0:
+              
+            System.out.println(a+"is even");
+            break;
+         case 1:
+           System.out.println(a+"is odd");
+           break;
+       }
+    }
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		a=s.nextInt();
+		evenodd();
+	}
+}

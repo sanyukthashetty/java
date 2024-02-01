@@ -1,0 +1,97 @@
+import java.util.*;
+public class Main
+{   static int n;
+    static int s1=0,s2=0;
+    static int Rand()
+    {
+        int d;
+        while(true)
+        {
+            d=(int)(Math.random()*10);
+            if(d>=1 && d<=6)
+            return d;
+            
+        }
+    }
+    
+    public static void main (String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a;
+        int p1=1,p2=2;
+        /*System.out.println("enter the number of player:");
+        int p=s.nextInt();*/
+        do
+        {
+            System.out.println("enter player number:");
+            int p=s.nextInt();
+            
+            //if(p==p1)
+            //{
+                int ds=Rand();
+                System.out.println("dice score:"+ds);
+                s1=s1+ds;
+                if(s1==9)
+                    s1=s1+20;
+                
+                else if(s1==23)
+                    s1=s1+20;
+                else if(s1==45)
+                    s1=s1+30;
+                else if(s1==52)
+                    s1=s1+30;
+                else if (s1==66)
+                    s1=s1+30;
+                else if(s1==98)
+                    s1=s1-90;
+                else if(s1==84)
+                    s1=s1-60;
+                else if(s1==78)
+                    s1=s1-50;
+                else if(s1==42)
+                    s1=s1-21;
+                else if(s1==30)
+                    s1=s1-25;
+                else if(s1>100)
+                    s1=s1-ds;
+                System.out.println("score:"+s1);
+          
+            }}while(s1==100);
+           /* else if(p==p2)
+            {
+                int ds=Rand();
+                System.out.println("dice score:"+ds);
+                s2=s2+ds;
+                if(s2==9)
+                    s2=s2+20;
+                
+                else if(s2==23)
+                    s2=s2+20;
+                else if(s2==45)
+                    s2=s2+30;
+                else if(s2==52)
+                    s2=s2+30;
+                else if(s2==66)
+                    s2=s2+30;
+                 else if(s2==98)
+                    s2=s2-90;
+                else if(s2==84)
+                    s2=s2-60;
+                else if(s2==78)
+                    s2=s2-50;
+                else if(s2==42)
+                    s2=s2-21;
+                else if(s2==30)
+                    s2=s2-25;
+                else if(s2>100)
+                    s2=s2-ds;
+                System.out.println("score:"+);
+            }*/
+        
+            
+        
+          
+        }
+        
+        
+    
+}

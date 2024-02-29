@@ -1,0 +1,154 @@
+(1)
+import java.util.Scanner;
+public class Main
+{
+       public static void main (String[] args) 
+    {
+         int n;
+        int t;    
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number of element:");
+        n=s.nextInt();
+        int a[]=new int[n];
+         System.out.println("enter the  element:");
+         for (int i=0;i<n;i++)
+         {
+             a[i]=s.nextInt();
+         }
+         System.out.println("enter the  element:");
+         t=s.nextInt();
+         int b[]=new int[2];
+         b=target(a,t);
+         for(int i=0;i<2;i++)
+         {
+             System.out.println(b[i]);
+         }
+         
+    }
+    static int[] target(int a[],int t)
+    {
+        int c[]=new int[2];
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=i+1;j<a.length;j++)
+            {
+                if(a[i]+a[i+1]==t)
+                {
+                    c[0]=i;
+                    c[1]=j;
+                }
+            }
+        }return c;
+}
+}
+(2)
+import java.util.Scanner;
+public class Main
+{
+       public static void main (String[] args) 
+    {
+        int n;
+        Scanner s=new Scanner(System.in);
+        n=s.nextInt();
+        System.out.println(power(n));
+        
+        
+    }
+	static boolean power(int n)
+   {
+	return ((n&(n-1))==0);
+   }
+}
+(3)
+import java.util.Scanner;
+public class Main
+{
+       public static void main (String[] args) 
+    {
+        int n;
+       Scanner s=new Scanner(System.in);
+        System.out.println("enter the number of element:");
+        n=s.nextInt();
+        int a[]=new int[n];
+         System.out.println("enter the  element:");
+         for (int i=0;i<n;i++)
+         {
+             a[i]=s.nextInt();
+         }
+         System.out.println(sort(a,n));
+    }
+    static boolean sort(int a[],int n)
+    {
+      int min=a[0];
+      int j=0;
+      for(int i=0;i<a.length;i++)
+      {
+          if(min>=a[i])
+          {
+              min=a[i];
+              j=i;
+          }
+      }
+      for(int i=j;i<a.length;i++)
+      {
+          if(min<=a[i])
+          {
+              min=a[i];
+              
+          }
+          else
+            return false;
+      }
+      for(int i=0;i<j;i++)
+      {
+          if(min<=a[i])
+          {
+              min=a[i];
+          }
+          else
+            return false;
+            
+      }
+      return true;
+      
+    }
+}
+(4)
+import java.util.Scanner;
+public class Main
+{
+       public static void main (String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+       String s=sc.nextLine();
+        String s1=pali(s);
+        System.out.println(s1);
+        sc.close();
+    }
+    static String pali(String s)
+    {
+        int len=0;
+        String temp=" ";
+        for(int i=0;i<s.length();i++)
+        {
+            for(int j=i;j<=s.length();j++)
+            {
+                String w=s.substring(i,j+1);
+                if(palin(w))
+                {
+                    if(len<w.length())
+                        len=w.length();
+                        temp=w;
+                }
+            }
+        }
+        return temp;
+    }
+    static boolean palin(String w)
+    {
+        return true;
+    }
+}
+       
+              
+        

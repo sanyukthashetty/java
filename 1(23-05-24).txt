@@ -1,0 +1,16 @@
+import java.util.*;
+public class Bricks{
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int x=sc.nextInt();
+        System.out.println(Wall(m,n,x));
+    }
+    static boolean Wall(int m,int n,int x)
+    {    int rlb=x/5;
+        int lbused=Math.min(rlb,n);
+        int rwl=x-(lbused*5);
+        return rwl<=n;
+    }
+}
